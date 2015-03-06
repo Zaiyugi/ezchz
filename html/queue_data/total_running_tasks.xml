@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TaskListing>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s250</shot>
+      <task>lightReefshipkeyCaustic</task>
+      <frame>0106</frame>
+      <submit>2015-03-05 16:11:53</submit>
+      <start>2015-03-06 05:04:43</start>
+      <elapsed>00:00:00:00:00:50</elapsed>
+      <queue>muenster</queue>
+      <machine>l0014.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-11-5360s250lightReefshipkeyCaustic0106</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0128</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 04:59:51</start>
+      <elapsed>00:00:00:00:05:42</elapsed>
+      <queue>muenster</queue>
+      <machine>l0011.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0128</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0131</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:00:26</start>
+      <elapsed>00:00:00:00:05:07</elapsed>
+      <queue>muenster</queue>
+      <machine>l0009.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0131</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0132</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:00:27</start>
+      <elapsed>00:00:00:00:05:06</elapsed>
+      <queue>muenster</queue>
+      <machine>l0027.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0132</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0133</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:01:30</start>
+      <elapsed>00:00:00:00:04:03</elapsed>
+      <queue>muenster</queue>
+      <machine>l0019.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0133</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0134</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:03:03</start>
+      <elapsed>00:00:00:00:02:30</elapsed>
+      <queue>muenster</queue>
+      <machine>l0016.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0134</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0135</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:03:04</start>
+      <elapsed>00:00:00:00:02:29</elapsed>
+      <queue>muenster</queue>
+      <machine>l0018.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0135</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0136</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:03:36</start>
+      <elapsed>00:00:00:00:01:57</elapsed>
+      <queue>muenster</queue>
+      <machine>l0007.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0136</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0137</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:03:37</start>
+      <elapsed>00:00:00:00:01:56</elapsed>
+      <queue>muenster</queue>
+      <machine>l0015.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0137</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0138</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:03:38</start>
+      <elapsed>00:00:00:00:01:55</elapsed>
+      <queue>muenster</queue>
+      <machine>l0021.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0138</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0139</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:03:39</start>
+      <elapsed>00:00:00:00:01:54</elapsed>
+      <queue>muenster</queue>
+      <machine>l0031.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0139</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0140</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:04:11</start>
+      <elapsed>00:00:00:00:01:22</elapsed>
+      <queue>muenster</queue>
+      <machine>l0023.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0140</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0141</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:04:44</start>
+      <elapsed>00:00:00:00:00:49</elapsed>
+      <queue>muenster</queue>
+      <machine>l0026.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0141</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0142</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:05:16</start>
+      <elapsed>00:00:00:00:00:17</elapsed>
+      <queue>muenster</queue>
+      <machine>l0008.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0142</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0143</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:05:18</start>
+      <elapsed>00:00:00:00:00:15</elapsed>
+      <queue>muenster</queue>
+      <machine>l0012.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0143</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0144</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:05:19</start>
+      <elapsed>00:00:00:00:00:14</elapsed>
+      <queue>muenster</queue>
+      <machine>l0024.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0144</qtask_id>
+   </Task>
+   <Task>
+      <user>ajbeaty</user>
+      <shot>s240</shot>
+      <task>lightSandsandKeyCaustic</task>
+      <frame>0145</frame>
+      <submit>2015-03-05 16:23:33</submit>
+      <start>2015-03-06 05:05:20</start>
+      <elapsed>00:00:00:00:00:13</elapsed>
+      <queue>muenster</queue>
+      <machine>l0025.fx.clemson.edu</machine>
+      <ss_taken>2015-03-06 05:05:33</ss_taken>
+      <qtask_id>ajbeaty2015-03-05_16-23-3360s240lightSandsandKeyCaustic0145</qtask_id>
+   </Task>
+</TaskListing>

@@ -1,0 +1,136 @@
+<!doctype html>
+<!-- Created By: zatch -->
+<!-- Date: 2014-10-01 -->
+<!-- Task Viewer: List all completed tasks -->
+<!-- Pulls from an XML file created by tasksToXML.py -->
+<!-- Uses Ajax with jQuery to build a table -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Task Listing</title>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			loadXML("","");
+		});
+
+		function loadXML(tag, regex) {
+			$.ajax({
+				type: "GET",
+				url: "../queue_data/total_done_tasks.xml",
+				dataType: "xml",
+				success: function(xml) {
+					var tasks = $(xml).find('Task');
+					if (tag != "" && regex != "") {
+						tasks = $(xml).find('Task').filter(function () {
+							var patt = new RegExp(regex);
+							return patt.test( $(tag, this).text() );
+						});
+					}
+
+					$('#taskList tbody').remove()
+					$('#taskList').append("<tbody>\n")
+					tasks.each(function() {
+						var who = $(this).find('Who').text();
+						var shot = $(this).find('Shot').text();
+						var what = $(this).find('What').text();
+						var num = $(this).find('Number').text();
+						var submitted = $(this).find('Submitted').text();
+						var elapsed = $(this).find('Elapsed').text();
+						var queue = $(this).find('Queue').text();
+						var fullId = $(this).find('FullID').text();
+						var td = "<td>", tdc = "</td>";
+						$('#taskList').append("<tr>" + 
+							td + who + tdc +
+							td + shot + tdc +
+							td + what + tdc +
+							td + num + tdc +
+							td + submitted + tdc +
+							td + elapsed + tdc +
+							td + queue + tdc + 
+							td + fullId + tdc + "</tr>")
+					});
+					$('#taskList').append("</tbody>\n")
+
+					$('#taskHeader h2').remove()
+					lastTask = $(xml).find('Task').first();
+					var finished = $(lastTask).find('Finished').text();
+					$('#taskHeader').append("<h2>qTasks marked as done since (" + finished + ")</h2>")
+				}
+			});
+		}
+
+		function filterXML(input) {
+			var i = input.indexOf(':');
+			var tag = input.slice(0,i);
+			var regex = input.slice(i+1);
+
+			loadXML(tag, regex);
+		}
+
+		</script>
+		<style type="text/css">
+			table {
+				border-spacing: 0px 0px;
+				border-collapse: collapse;
+				font-family: Sans-Serif;
+			}
+
+			td {
+				text-align: center;
+				border: 1px solid black;
+				padding: 5px;
+			}
+
+         header {
+            line-height: 10px;
+            height: 40px;
+            text-align: left;
+         }
+
+			#filter {
+				margin-bottom: 5px;
+			}
+
+			#filter h3 {
+				display: inline;
+			}
+
+			#filter_text {
+				display: inline;
+			}
+
+			#apply_filter {
+				display: inline;
+			}
+
+		</style>
+   </head>
+   <body>
+		<header id="taskHeader">
+		</header>
+		<div id="filter">
+			<h3>Filter: </h3>
+			<input type="text" id="filter_text" onkeyup="if(event.keyCode == 13) { filterXML(document.getElementById('filter_text').value) }"/>
+			<input type="button" id="apply_filter" value="Apply" onclick="filterXML(document.getElementById('filter_text').value)">
+			<p>(Cell ID: Who, Shot, What, Number, Submitted, Started, Finished, Elapsed, Queue)</p>
+			<hr align="left" width="50%"/>
+		</div>
+		<table id="taskList">
+			<thead>
+			<tr>
+				<th>Who</th>
+				<th>Shot</th>
+				<th>What</th>
+				<th>#</th>
+				<th>Submitted</th>
+				<th>Elapsed</th>
+				<th>Queue</th>
+				<th>Full ID</th>
+			</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+   </body>
+</html>

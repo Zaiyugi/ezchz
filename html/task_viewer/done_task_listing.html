@@ -1,0 +1,170 @@
+<!doctype html>
+<!-- Created By: zatch -->
+<!-- Date: 2014-10-01 -->
+<!-- Completed Task Viewer: Lists all completed tasks -->
+<!-- Pulls from an XML file created by doneTasksToXML.py -->
+<!-- Uses Ajax with jQuery to build a table -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Task Listing</title>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			loadXML("","");
+		});
+
+		function loadXML(tag, regex) {
+			$.ajax({
+				type: "GET",
+				url: "../queue_data/total_done_tasks.xml",
+				dataType: "xml",
+				success: function(xml) {
+					var tasks = $(xml).find('Task');
+					if (tag.length > 0 && regex.length > 0) {
+						for(var i = 0; i < tag.length; i++) {
+							tasks = tasks.filter(function () {
+								var patt = new RegExp(regex[i]);
+								return patt.test( $(tag[i], this).text() );
+							});
+						}
+					}
+
+					var tbl = document.getElementById("taskList");
+					var tbody = document.getElementsByTagName("tbody")[0];
+					tbl.removeChild(tbody);
+
+					var tbl_body = document.createElement("tbody");
+
+					var row_colors = ["#ffcdde", "#ffeecd", "#cdffee", "#cddeff"];
+					var row_cnt = 0;
+					tasks.each(function() {
+						var cellData = [
+							$(this).find('user').text(), $(this).find('shot').text(),
+							$(this).find('task').text(), $(this).find('frame').text(),
+							$(this).find('submit').text(), $(this).find('elapsed').text(), 
+							$(this).find('queue').text(), $(this).find('qtask_id').text()
+						];
+
+						var tbl_row = document.createElement("tr");
+						tbl_row.style.cssText = "background-color:" + row_colors[row_cnt%4] + ";";
+						for(var i = 0; i < cellData.length; i++)
+						{
+							var tbl_cell = document.createElement("td");
+							var tbl_cell_text = document.createTextNode(cellData[i]);
+							tbl_cell.appendChild(tbl_cell_text);
+							tbl_row.appendChild(tbl_cell);
+						}
+						tbl_body.appendChild(tbl_row);
+						row_cnt++;
+					});
+					tbl.appendChild(tbl_body);
+
+					var header = document.getElementById("taskHeader");
+					var h2 = header.getElementsByTagName("h2")[0];
+					header.removeChild(h2);
+					var lastTask = $(xml).find('Task').first();
+					var taskCount = $(xml).find('Task').length;
+					var finished = $(lastTask).find('finish').text();
+
+					h2 = document.createElement("h2");
+					var h2_text = document.createTextNode(taskCount + " qtasks marked as done as of (" + finished + ")");
+					h2.appendChild(h2_text);
+					header.appendChild(h2);
+				}
+			});
+		}
+
+		function filterXML(input) {
+			var filters = input.split("~,");
+
+			var tag = []
+			var regex = []
+			for(var i = 0; i < filters.length; i++) {
+				var j = filters[i].indexOf(':');
+				tag[i] = filters[i].slice(0,j);
+				regex[i] = filters[i].slice(j+1);
+			}
+
+			loadXML(tag, regex);
+		}
+
+		</script>
+		<style type="text/css">
+			h2 {
+				font-family: Sans-Serif;
+			}
+
+			p {
+				font-family: Sans-Serif;
+			}
+
+			table {
+				border-spacing: 0px 0px;
+				border-collapse: collapse;
+				font-family: Sans-Serif;
+				width: 100%;
+			}
+
+			td {
+				text-align: left;
+				border: 1px solid black;
+				padding: 5px;
+			}
+
+         header {
+            line-height: 10px;
+            height: 40px;
+            text-align: left;
+         }
+
+			#filter {
+				margin-bottom: 5px;
+			}
+
+			#filter h3 {
+				display: inline;
+				font-family: Sans-Serif;
+			}
+
+			#filter_text {
+				display: inline;
+			}
+
+			#apply_filter {
+				display: inline;
+			}
+
+		</style>
+   </head>
+   <body>
+		<header id="taskHeader">
+			<h2></h2>
+		</header>
+		<div id="filter">
+			<h3>Filter: </h3>
+			<input type="text" id="filter_text" onkeyup="if(event.keyCode == 13) { filterXML(document.getElementById('filter_text').value) }"/>
+			<input type="button" id="apply_filter" value="Apply" onclick="filterXML(document.getElementById('filter_text').value)">
+			<p>
+				Refer to the Help tab for more info on setting filters.
+			</p>
+			<hr align="left" width="50%"/>
+		</div>
+		<table id="taskList">
+			<thead>
+			<tr>
+				<th>user</th>
+				<th>shot</th>
+				<th>task</th>
+				<th>frame</th>
+				<th>submit</th>
+				<th>elapsed</th>
+				<th>queue</th>
+				<th>qtask_id</th>
+			</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+   </body>
+</html>
